@@ -1,0 +1,13 @@
+:root {
+    --icon-size: 30px;
+}
+
+.themeDiv{
+    display: inline-block;
+}
+
+.themeIcon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    object-fit: contain;
+}
