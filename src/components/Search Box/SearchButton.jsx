@@ -1,7 +1,7 @@
 import { useState } from "react"
 import '../DisplayMode/DisplayMode.css'
 import './SearchButton.css'
-import fetchSubredditInfo from "./fetchSubredditInfo"
+import fetchSubredditInfo from "../FetchingData/fetchSubredditInfo"
 
 export default function SearchButton({displayTheme}){
 
