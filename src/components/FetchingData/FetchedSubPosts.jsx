@@ -1,6 +1,6 @@
 import './FetchedSubPosts.css'
 
-export default function fetchedSubPosts({fetchResponse}){
+export default function FetchedSubPosts({fetchResponse}){
     
    return(
     <div className='sub-posts'>

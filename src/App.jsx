@@ -8,29 +8,22 @@ import DisplayMode from './components/DisplayMode/DisplayMode'
 import SearchButton from './components/Search Box/SearchButton';
 import fetchSubredditInfo from './components/FetchingData/fetchSubredditInfo';
 import FetchedSubPosts from './components/FetchingData/FetchedSubPosts'
+import DisplaySubredditInfo from './components/DisplaySubreddit/DisplaySubredditData';
 
 
 function App() {
   //const [displayTheme, setDisplayTheme]=useState(window.matchMedia('(prefers-color-scheme: dark)').matches);
-  const [subResponse,setSubResponse]=useState('');
-  useEffect(()=>{
-    const fetchData=async ()=>{
-      let response= await fetchSubredditInfo('india')
-      setSubResponse(response)
-      //console.log(subResponse);
-    }
-    fetchData()
-  },[])
 
-  
  
 
   return (
     <BrowserRouter>
     {/* <DisplayMode {...{displayTheme, setDisplayTheme, }} />
     <SearchButton {...{displayTheme}} /> */}
-    {subResponse? (<FetchedSubPosts {...{fetchResponse:subResponse}} />) : (<p>Kunal</p>)}
-    
+    {/* {subResponse? (<FetchedSubPosts {...{fetchResponse:subResponse}} />) : (<p>Kunal</p>)} */}
+      <DisplaySubredditInfo {...{subName:'india'}}>
+        
+      </DisplaySubredditInfo>
     
     </BrowserRouter>
   )

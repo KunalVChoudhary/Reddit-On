@@ -1,0 +1,45 @@
+:root{
+    --postWidth:23%;
+    --fontFamily:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --icon-size:15px;
+    --subLogHeight:60px;    
+}
+
+@media (max-width: 1399.98px) {
+   :root{
+    --postWidth: 40%;
+   }
+}
+
+@media (max-width: 650px) {
+    :root{
+     --postWidth: 75%;
+    }
+ }
+
+.complete-sub{
+    display: inline-block;
+    height: 100vh;
+    width: var(--postWidth);
+}
+.sub-log{
+    min-height: var(--subLogHeight);
+    font-size:x-large;
+    font-weight: bolder;
+}
+
+.sub-log-icon{
+    width: calc(var(--icon-si) + 7.5px);
+    height: calc(var(--icon-size) + 7.5px);
+    object-fit: contain;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.sub-not-loaded{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fontFamily);
+    font-weight: bolder;
+}
