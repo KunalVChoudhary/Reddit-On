@@ -1,0 +1,17 @@
+.header-section{
+    height: 70px;
+    width: 100vw;
+    border-bottom: 2px solid black;
+}
+
+.header-section>*{
+    height: 50px;
+    line-height:  50px;
+}
+
+.app-name{
+    font-family:cursive;
+    font-size: 50px;
+    font-weight: 700;
+    color: rgb(255, 70, 3);
+}

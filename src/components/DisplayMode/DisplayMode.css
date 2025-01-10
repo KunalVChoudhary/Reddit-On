@@ -7,7 +7,9 @@
 }
 
 .themeIcon {
-    width: var(--icon-size);
-    height: var(--icon-size);
+    width: calc(var(--icon-size) + 12.5px);
+    height: calc(var(--icon-size) + 12.5px);
     object-fit: contain;
+    border: 2px solid black;
+    border-radius: 10px;
 }

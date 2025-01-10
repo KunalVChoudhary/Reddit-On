@@ -5,7 +5,7 @@ export default function DisplayMode({displayTheme, setDisplayTheme}){
     return(
         <>
             <div className="dropdown themeDiv">
-                <img className="themeIcon dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" src={displayTheme ? 'icons8-dark-mode-50.png' : 'icons8-daylight.svg'} alt="" />
+                <img className="themeIcon dropdown-toggle p-2 " type="button" data-bs-toggle="dropdown" aria-expanded="false" src={displayTheme ? 'icons8-dark-mode-50.png' : 'icons8-daylight.svg'} alt="" />
 
                 <ul className="dropdown-menu">
                     <li><a className="dropdown-item" onClick={()=>{
