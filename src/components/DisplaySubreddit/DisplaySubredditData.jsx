@@ -3,7 +3,7 @@ import fetchSubredditInfo from "../FetchingData/fetchSubredditInfo";
 import FetchedSubPosts from "../FetchingData/FetchedSubPosts";
 import { useEffect, useState } from "react";
 import './DisplaySubredditData.css'
-export default function DisplaySubredditInfo({subName}){
+export default function DisplaySubredditData({subName ,index}){
     const [subredditName,setSubredditName]= useState(subName)
     const [subResponse,setSubResponse]=useState(null);
     const [reload,setReload]=useState('true')
@@ -14,26 +14,24 @@ export default function DisplaySubredditInfo({subName}){
             };
         fetchData()
         
-    },[subredditName,reload])
+    },[subredditName,reload])   
 
     return(
-        <>
-        <div className="complete-sub">
+        <div className="complete-sub" key={index}>
             <div className="sub-log post-container d-inline-flex row ">
                 <div className="sub-name d-inline-flex justify-content-start align-items-center col-10 col-md-9 px-3">r/{subName}</div>
                 <div className="sub-reload-close px-2 d-inline-flex justify-content-end align-items-center col-2 col-md-3">
                     <img className="sub-log-icon px-2" src="\icons8-reload-50.png" onClick={()=>{
                     setReload(prev => !prev)
+                    setSubredditName(subName)
                     }} alt="" />
                     <img className="sub-log-icon px-2" src="\icons8-close-50.png" onClick={()=>{
                     setSubredditName('lol')
-                    setReload(prev => !prev)
                     }} alt="" />
                 </div>
             </div>
             {subResponse ? (<FetchedSubPosts {...{fetchResponse:subResponse}} >
             </FetchedSubPosts>) : (<div className="sub-not-loaded sub-posts">Loading</div>)}
         </div>
-        </>
     )
 }

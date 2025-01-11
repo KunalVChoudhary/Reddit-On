@@ -1,5 +1,5 @@
 :root{
-    --postWidth:23%;
+    --postWidth:27%;
     --fontFamily:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --icon-size:15px;
     --subLogHeight:60px;    
@@ -21,6 +21,7 @@
     display: block;
     height: calc(100vh - 70px);
     width: var(--postWidth);
+    
 }
 .sub-log{
     min-height: var(--subLogHeight);

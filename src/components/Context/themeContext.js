@@ -1,8 +1,11 @@
 import { createContext } from "react";
 
 const themeContext = createContext({
+    subItemBox:[],
+    setSubItemBox:()=>{},
     displayTheme: '',
-    setDisplayTheme: ()=>{}
+    setDisplayTheme: ()=>{},
+    itemBoxLength:0,
 });
 
 export default  themeContext;
