@@ -21,6 +21,8 @@
     display: block;
     height: calc(100vh - 70px);
     width: var(--postWidth);
+    border: 2px solid;
+    border-top: 0;
     
 }
 .sub-log{

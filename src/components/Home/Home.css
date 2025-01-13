@@ -35,4 +35,10 @@
 .dark-mode-on{
     background-color: rgb(43, 43, 43);
     color: aliceblue;
+    border-color: aliceblue;
+}
+
+.light-mode-on{
+    background-color: azure;
+    border-color: rgb(43, 43, 43);
 }

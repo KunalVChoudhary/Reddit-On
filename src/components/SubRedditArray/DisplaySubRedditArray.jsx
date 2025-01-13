@@ -7,7 +7,7 @@ export default function DisplaySubRedditArray(){
 
     return(
         <>
-            <div className="subRedditList d-flex">
+            <div className={`subRedditList d-flex ${useThemeContext.displayTheme? 'dark-mode-on' : 'light-mode-on'}`}>
                 {useThemeContext.subItemBox.map((subName ,index)=>{
                     if (index>useThemeContext.itemBoxLength-1){
                         return

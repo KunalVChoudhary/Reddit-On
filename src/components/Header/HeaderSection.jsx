@@ -7,7 +7,7 @@ export default function HeaderSection({displayTheme, setDisplayTheme, }){
     const useThemeContext=useContext(themeContext)
     return(
         <>
-            <div className='header-section d-flex align-items-center row'>
+            <div className={`header-section d-flex align-items-center row ${useThemeContext.displayTheme? 'dark-mode-on' : 'light-mode-on'}`}>
                 <div className="app-name-section col-8 px-3">
                     <div className="app-name">Reddit-ON</div>
                 </div>

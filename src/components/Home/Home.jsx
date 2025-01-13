@@ -30,7 +30,7 @@ export default function Home(){
             </div>
             <div className="home-top-theme d-flex justify-content-end p-3 position-absolute top-0">
                     <DisplayMode {...{displayTheme:useThemeContext.displayTheme,setDisplayTheme:useThemeContext.setDisplayTheme}}/>
-                </div>
+            </div>
         </>
     )
 }
