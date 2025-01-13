@@ -41,7 +41,9 @@ function App() {
      <BrowserRouter>
         <Routes>
           <Route path='/' element=
-          {<Home/>}
+          {<themeContext.Provider value={{subItemBox, setSubItemBox, displayTheme, setDisplayTheme, itemBoxLength}}>
+            <Home/>
+            </themeContext.Provider>}
           />
           <Route path='/list' element=
           {<themeContext.Provider value={{subItemBox, setSubItemBox, displayTheme, setDisplayTheme, itemBoxLength}}>

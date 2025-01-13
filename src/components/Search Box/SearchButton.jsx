@@ -33,7 +33,7 @@ export default function SearchButton({displayTheme,setSubItemBox}){
                             if (e.key==='Enter' && searchItem != ''){
                                 if(useThemeContext.subItemBox.length >=useThemeContext.itemBoxLength){
                                     const newItemBox=useThemeContext.subItemBox.slice(1);
-                                    useThemeContext.setSubItemBox(prev => [... newItemBox,searchItem])
+                                    // useThemeContext.setSubItemBox(prev => [... newItemBox,searchItem])
                                 }
                                 else{
                                     useThemeContext.setSubItemBox(prev => [...prev, searchItem]);

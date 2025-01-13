@@ -15,7 +15,6 @@ export default function DisplayMode({displayTheme, setDisplayTheme}){
                         setDisplayTheme(true)
                         }}>Dark Mode</a></li>
                     <li><a className="dropdown-item" onClick={()=>{
-                        console.log('sys');
                         setDisplayTheme(window.matchMedia('(prefers-color-scheme: dark)').matches)
                         }}>System Default</a></li>
                 </ul>

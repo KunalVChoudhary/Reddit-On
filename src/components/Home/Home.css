@@ -1,0 +1,38 @@
+:root{
+    --middleSectionWidth:50%;
+}
+
+@media (max-width: 1399.98px) {
+    :root{
+     --middleSectionWidth: 60%;
+    }
+ }
+ 
+ @media (max-width: 650px) {
+     :root{
+      --middleSectionWidth:75%;
+     }
+  }
+
+.home{
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.home-top-theme{
+    width: 100%;
+}
+
+.middle-screen{
+    max-width: var(--middleSectionWidth);
+}
+
+.app-logo > *{
+    height: 70px;
+    width: 70px;
+}
+
+.dark-mode-on{
+    background-color: rgb(43, 43, 43);
+    color: aliceblue;
+}
