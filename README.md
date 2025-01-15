@@ -59,7 +59,7 @@ To run this project locally, ensure you have the following:
 ## Deployed URL
 
 Access the live application here:
-[Reddit-On](https://your-deployed-url.com)
+[Reddit-On](https://reddit-on.netlify.app/)
 
 ---
 
