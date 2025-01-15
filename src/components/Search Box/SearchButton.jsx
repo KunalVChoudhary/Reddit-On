@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from "react"
+import { useContext, useRef, useState,useEffect } from "react"
 import '../DisplayMode/DisplayMode.css'
 import './SearchButton.css'
 import themeContext from "../Context/themeContext";
@@ -8,6 +8,19 @@ export default function SearchButton(){
     const [searchItem, setSearchItem]= useState('');
     const useThemeContext=useContext(themeContext);
     const closeModalRef=useRef(null);
+    const [alertTrack, setAlertTrack]=useState(false)
+
+    useEffect(()=>{
+        if (alertTrack)
+            {const alertTimer = setTimeout(() => {
+            alert(
+                `You can track a maximum of ${useThemeContext.itemBoxLength} subreddits at the current viewport. Remove a previous subreddit to add a new one.`
+            );
+            setAlertTrack(false)
+            }, 100);
+            return ()=>clearTimeout(alertTimer)}
+
+    },[alertTrack])
 
     return(
         <>
@@ -31,10 +44,11 @@ export default function SearchButton(){
                         }} onKeyDown={(e)=>{
                             if (e.key==='Enter' && searchItem != ''){
                                 if(useThemeContext.subItemBox.length >=useThemeContext.itemBoxLength){
-                                    // alert()
-                                    // const newItemBox=[...useThemeContext.subItemBox]
-                                    // newItemBox.splice(0,1)
-                                    // useThemeContext.setSubItemBox([... newItemBox,searchItem])
+                                    setSearchItem('');
+                                    closeModalRef.current.click();
+                                    setAlertTrack(true)
+                                    // alert(`Can track maximum of ${useThemeContext.itemBoxLength} sub-reddit at current viewport.To add new sub-reddit remove previous subs`)
+                                    return
                                 }
                                 else{
                                     useThemeContext.setSubItemBox(prev => [...prev, searchItem]);
