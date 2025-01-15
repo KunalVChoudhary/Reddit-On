@@ -47,7 +47,6 @@ export default function SearchButton(){
                                     setSearchItem('');
                                     closeModalRef.current.click();
                                     setAlertTrack(true)
-                                    // alert(`Can track maximum of ${useThemeContext.itemBoxLength} sub-reddit at current viewport.To add new sub-reddit remove previous subs`)
                                     return
                                 }
                                 else{
