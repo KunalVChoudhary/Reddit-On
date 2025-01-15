@@ -3,7 +3,7 @@ import '../DisplayMode/DisplayMode.css'
 import './SearchButton.css'
 import themeContext from "../Context/themeContext";
 
-export default function SearchButton({displayTheme,setSubItemBox}){
+export default function SearchButton(){
 
     const [searchItem, setSearchItem]= useState('');
     const useThemeContext=useContext(themeContext);
@@ -11,7 +11,7 @@ export default function SearchButton({displayTheme,setSubItemBox}){
 
     return(
         <>
-            <button type="button" className={`btn search-button ${displayTheme ? 'dark':'light'}`} data-bs-toggle="modal" data-bs-target="#searchModal">
+            <button type="button" className={`btn search-button ${useThemeContext.displayTheme ? 'dark':'light'}`} data-bs-toggle="modal" data-bs-target="#searchModal">
                 Search
             </button>
 
@@ -31,7 +31,10 @@ export default function SearchButton({displayTheme,setSubItemBox}){
                         }} onKeyDown={(e)=>{
                             if (e.key==='Enter' && searchItem != ''){
                                 if(useThemeContext.subItemBox.length >=useThemeContext.itemBoxLength){
-                                    const newItemBox=useThemeContext.subItemBox.slice(1);
+                                    // alert()
+                                    // const newItemBox=[...useThemeContext.subItemBox]
+                                    // newItemBox.splice(0,1)
+                                    // useThemeContext.setSubItemBox([... newItemBox,searchItem])
                                 }
                                 else{
                                     useThemeContext.setSubItemBox(prev => [...prev, searchItem]);

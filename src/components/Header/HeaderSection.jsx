@@ -13,7 +13,7 @@ export default function HeaderSection({displayTheme, setDisplayTheme, }){
                 </div>
                 <div className="search-mode d-flex justify-content-end align-items-center col-4 px-3">
                     <div className="header-search d-inline-block px-3">
-                        <SearchButton {...{displyTheme:useThemeContext.displayTheme}}></SearchButton>
+                        <SearchButton/>
                     </div>
                     <div className="header-disply-mode d-inline-block px-3">
                         <DisplayMode {...{displayTheme:useThemeContext.displayTheme, setDisplayTheme:useThemeContext.setDisplayTheme}}></DisplayMode>
