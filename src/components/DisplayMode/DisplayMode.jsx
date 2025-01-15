@@ -1,5 +1,4 @@
 import './DisplayMode.css'
-//import Dropdown from 'react-bootstrap/Dropdown';
 
 export default function DisplayMode({displayTheme, setDisplayTheme}){
     return(

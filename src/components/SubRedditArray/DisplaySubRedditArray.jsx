@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext,} from "react"
 import DisplaySubredditData from "../DisplaySubreddit/DisplaySubredditData"
 import themeContext from "../Context/themeContext"
 import './DisplaySubRedditArray.css'

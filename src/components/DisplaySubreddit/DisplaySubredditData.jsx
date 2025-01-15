@@ -1,4 +1,3 @@
-//import { useContext } from "react"
 import fetchSubredditInfo from "../FetchingData/fetchSubredditInfo";
 import FetchedSubPosts from "../FetchingData/FetchedSubPosts";
 import { useEffect, useState } from "react";

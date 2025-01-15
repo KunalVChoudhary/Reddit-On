@@ -1,13 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
 import { useEffect, useState } from "react";
 import './App.css'
-import DisplaySubredditData from './components/DisplaySubreddit/DisplaySubredditData';
-import HeaderSection from './components/Header/HeaderSection';
 import themeContext from './components/Context/themeContext'
-import DisplaySubRedditArray from './components/SubRedditArray/DisplaySubRedditArray';
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 import List from './components/List/List';

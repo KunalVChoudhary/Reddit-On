@@ -23,16 +23,15 @@ export default function SearchButton({displayTheme,setSubItemBox}){
                 </div>
                 <div className="modal-body pb-3 row d-flex align-items-center justify-content-center">
                     <div className="search-bar row col-11 d-flex align-items-center">
-                        <div className="search-icon col-auto">
+                        <div className="search-icon d-flex align-items-center col-auto">
                             <img className="search-icon-img" src="icons8-search.svg" alt="bar" />
                         </div>
-                        <input className="search-input-box col" type="text" autoFocus placeholder="Sub-Reddit" value={searchItem} onChange={(e)=>{
+                        <input className="search-input-box col px-3" type="text" autoFocus placeholder="Sub-Reddit" value={searchItem} onChange={(e)=>{
                             setSearchItem(e.target.value);
                         }} onKeyDown={(e)=>{
                             if (e.key==='Enter' && searchItem != ''){
                                 if(useThemeContext.subItemBox.length >=useThemeContext.itemBoxLength){
                                     const newItemBox=useThemeContext.subItemBox.slice(1);
-                                    // useThemeContext.setSubItemBox(prev => [... newItemBox,searchItem])
                                 }
                                 else{
                                     useThemeContext.setSubItemBox(prev => [...prev, searchItem]);

@@ -1,5 +1,5 @@
 :root {
-    --icon-size: 30px;
+    --icon-size-displayMode: 30px;
 }
 
 .themeDiv{
@@ -7,9 +7,13 @@
 }
 
 .themeIcon {
-    width: calc(var(--icon-size) + 12.5px);
-    height: calc(var(--icon-size) + 12.5px);
+    width: calc(var(--icon-size) + 25px);
+    height: calc(var(--icon-size) + 25px);
     object-fit: contain;
     border: 2px solid black;
     border-radius: 10px;
+}
+
+.dropdown-item:hover{
+    background: rgb(225, 225, 197);
 }
