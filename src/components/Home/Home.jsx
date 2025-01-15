@@ -1,10 +1,19 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import DisplayMode from "../DisplayMode/DisplayMode";
 import SearchButton from "../Search Box/SearchButton";
 import './Home.css'
 import themeContext from "../Context/themeContext";
+import { useNavigate } from "react-router-dom";
 export default function Home(){
     const useThemeContext=useContext(themeContext);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      if (useThemeContext.subItemBox.length > 0) {
+        console.log('object');
+        navigate("/list");
+      }
+    }, [useThemeContext.subItemBox, navigate]);
     return(
         <>
             <div className={`home d-flex flex-column justify-content-center align-items-center ${useThemeContext.displayTheme? 'dark-mode-on' : 'light-mode-on'}`}>
@@ -24,7 +33,9 @@ export default function Home(){
                         <SearchButton/>
                     </div>
                     <div className="github-logo m-3">
-                        <button className={`btn search-button`}>Github</button>
+                        <a href="https://github.com/KunalVChoudhary" target='_blank' className="github-link">
+                            <button className={`btn search-button`}>Github</button>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import DisplaySubredditData from "../DisplaySubreddit/DisplaySubredditData"
 import themeContext from "../Context/themeContext"
+import './DisplaySubRedditArray.css'
 
 export default function DisplaySubRedditArray(){
     const useThemeContext=useContext(themeContext);
@@ -13,7 +14,7 @@ export default function DisplaySubRedditArray(){
                         return
                     }
                     return(
-                        <DisplaySubredditData key={index} {...{subName ,index}}>
+                        <DisplaySubredditData key={index} {...{subName ,index ,subItemBox:useThemeContext.subItemBox,setSubItemBox:useThemeContext.setSubItemBox}}>
                         </DisplaySubredditData>                
                     )
                 })}

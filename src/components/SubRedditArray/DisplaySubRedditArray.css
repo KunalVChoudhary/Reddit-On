@@ -1,0 +1,4 @@
+.subRedditList{
+    overflow: hidden;
+    height: calc(100vh - 70px);
+}

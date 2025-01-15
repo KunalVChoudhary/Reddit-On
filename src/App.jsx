@@ -10,11 +10,14 @@ import DisplaySubRedditArray from './components/SubRedditArray/DisplaySubRedditA
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
+import List from './components/List/List';
 
 
 function App() {
   const [displayTheme, setDisplayTheme]=useState(window.matchMedia('(prefers-color-scheme: dark)').matches); 
-  const [subItemBox , setSubItemBox]=useState(['india']);
+  const [subItemBox , setSubItemBox]=useState(()=>{
+    return JSON.parse(localStorage.getItem('subItemBox')) || [];
+  });
   const [itemBoxLength, setItemBoxLength]=useState(0);
   const updateBoxLength = () => {
           const screenWidth = window.innerWidth;
@@ -35,6 +38,10 @@ function App() {
               window.removeEventListener('resize', updateBoxLength);
           };
     }, []);
+
+  useEffect(()=>{
+    localStorage.setItem('subItemBox',JSON.stringify(subItemBox))
+  },[subItemBox])
   
 
   return (
@@ -47,8 +54,7 @@ function App() {
           />
           <Route path='/list' element=
           {<themeContext.Provider value={{subItemBox, setSubItemBox, displayTheme, setDisplayTheme, itemBoxLength}}>
-            <HeaderSection {...{displayTheme, setDisplayTheme, }}></HeaderSection>
-            <DisplaySubRedditArray></DisplaySubRedditArray>
+            <List/>
           </themeContext.Provider>}
           />
         </Routes>

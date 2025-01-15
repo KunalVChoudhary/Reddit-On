@@ -2,8 +2,7 @@ import { useContext, useRef, useState } from "react"
 import '../DisplayMode/DisplayMode.css'
 import './SearchButton.css'
 import themeContext from "../Context/themeContext";
-import { Modal } from "react-bootstrap";
-import { Fade } from "react-bootstrap";
+
 export default function SearchButton({displayTheme,setSubItemBox}){
 
     const [searchItem, setSearchItem]= useState('');

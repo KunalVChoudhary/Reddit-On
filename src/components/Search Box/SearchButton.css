@@ -8,6 +8,10 @@
     background-color: green;
 }
 
+.search-button:hover{
+    --bs-btn-hover-border-color: inherit;
+}
+
 .search-bar{
     overflow: hidden;
     height: 40px;

@@ -32,6 +32,12 @@
     width: 70px;
 }
 
+.github-link{
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid inherit;
+}
+
 .dark-mode-on{
     background-color: rgb(43, 43, 43);
     color: aliceblue;
