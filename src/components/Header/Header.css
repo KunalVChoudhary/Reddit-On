@@ -1,7 +1,7 @@
 .header-section{
     height: 70px;
     width: 100%;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid;
 }
 
 .header-section>*{
